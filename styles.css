@@ -1,12 +1,12 @@
-﻿@media only screen and (orientation = landscape){
+﻿
 body{
     background-image: url("bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height= 100%;
-}}
-@media only screen and (orientation = portrait){
+}
+@media only screen (orientation = portrait){
 body{
     background-image: url("bg2.jpg");
     background-repeat: no-repeat;
