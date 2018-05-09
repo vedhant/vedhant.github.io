@@ -3,5 +3,5 @@
     background-repeat: no-repeat;
     background-position: left top;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-width: 100%;
 }
