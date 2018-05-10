@@ -186,6 +186,31 @@ body{
     justify-items: center;
 }}
 @media only screen and (max-width:700px){
+    body{
+    background-image: url("bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+#aboutme{
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 60px;
+    background-color: rgba(235,110,0,0.9);
+    grid-template-areas: "aboutmepic"
+        "aboutmetext"
+    }
+#aboutmetext > p{
+    width: 70%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: white;
+    padding-left: 5%;
+    padding-top: 15%;
+    font-size: 115%;
+    font-weight: normal;
+}
     #interest{
     display: grid;
     grid-template-columns: 1fr 1fr;
