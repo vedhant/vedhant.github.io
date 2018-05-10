@@ -21,7 +21,7 @@ body{
 	padding: 40px;
     width: 92%;
     margin: auto;
-    
+/*    border: 2px solid blue;*/
 		}
 
 #aboutme{
@@ -149,6 +149,7 @@ body{
     grid-area: key;
 }
 
+/*
 @media only screen and (orientation:portrait){
 body{
     background-image: url("bg2.jpg");
@@ -185,7 +186,8 @@ body{
         "chess key";
     justify-items: center;
 }}
-@media only screen and (max-width:700px){
+*/
+@media only screen and (max-width:700px) and (orientation:portrait){
     body{
     background-image: url("bg2.jpg");
     background-repeat: no-repeat;
