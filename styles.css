@@ -1,11 +1,154 @@
 ﻿
 body{
-    background-image: url("bg.jpg");
+    background-image: url("bw.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+    
 }
+
+#content{
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 550px auto 270px auto;
+/*    grid-auto-rows: minmax(550px,auto);*/
+}
+
+#content > div{
+/*			background: #3bbced;*/
+	padding: 40px;
+    width: 92%;
+    margin: auto;
+    
+		}
+
+#aboutme{
+    display: grid;
+    grid-template-columns: 5fr 9fr;
+    grid-gap: 60px;
+    background-color: rgba(235,110,0,0.9);
+    grid-template-areas: "aboutmepic aboutmetext"
+}
+
+#aboutme div{
+			
+    padding: 0px;
+    
+		}
+#aboutmepic{
+    width: 100%;
+    grid-area: aboutmepic;
+}
+#aboutmetext{
+    grid-area: aboutmetext;
+}
+#aboutmetext > p{
+    width: 60%;
+    font-family:'Work Sans', sans-serif;
+    color: white;
+    padding-left: 25%;
+    padding-top: 15%;
+    font-size: 135%;
+    font-weight: normal;
+}
+#hi{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 600%;
+    text-align: center;
+    font-weight: 900;
+    
+}
+
+
+#interest{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-areas: 
+        "bad code cricket"
+        "learn chess key";
+    justify-items: center;
+}
+#interest > div{
+    height: 220px;
+    padding: 0px;
+/*    border: 1px solid red;*/
+    background-color: rgba(235,110,0,0);
+    border-radius: 50%;
+    transition: background-color 0.8s, height 0.8s;
+    
+}
+
+#interest > div:hover{
+    background-color: rgba(235,110,0,0.7);
+    height: 250px;
+}
+#interest > div:hover img{
+   opacity: 0;
+    width: 250px; 
+}
+#interest > div:hover .inttext{
+    color: rgba(255,255,255,1);
+}
+
+#interest img{
+    width: 220px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.8s, width 0.8s;
+/*    z-index: 0;*/
+}
+#interest img:hover{
+    opacity: 0;
+    width: 250px;
+}
+
+.inttext{
+    padding: 0px;
+    position: relative;
+    top: -160px;
+    text-align: center;
+    color: rgba(255,255,255,0);
+    transition: color 0.8s;
+    font-family:'Work Sans', sans-serif;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+
+#inttitle{
+    padding: 20%;
+    
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 600%;
+    text-align: center;
+    font-weight: 900;
+    
+    
+}
+#badminton{
+    grid-area: bad;
+}
+#coding{
+    grid-area: code;
+}
+#chess{
+    grid-area: chess;
+}
+#cricket{
+    grid-area: cricket;
+}
+#learning{
+    grid-area: learn;
+}
+#keyboard{
+    grid-area: key;
+}
+
 @media only screen and (orientation:portrait){
 body{
     background-image: url("bg2.jpg");
@@ -13,4 +156,81 @@ body{
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+}
+#aboutme{
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 60px;
+    background-color: rgba(235,110,0,0.9);
+    grid-template-areas: "aboutmepic"
+        "aboutmetext"
+    }
+#aboutmetext > p{
+    width: 70%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: white;
+    padding-left: 5%;
+    padding-top: 15%;
+    font-size: 115%;
+    font-weight: normal;
+}
+#interest{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "bad code"
+        "cricket learn"
+        "chess key";
+    justify-items: center;
 }}
+@media only screen and (max-width:700px){
+    #interest{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "bad code"
+        "cricket learn"
+        "chess key";
+    justify-items: center;
+    
+}
+    #interest img{
+    width: 110px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.8s, width 0.8s;
+/*    z-index: 0;*/
+}
+    #interest > div{
+    height: 110px;
+    padding: 0px;
+/*    border: 1px solid red;*/
+    background-color: rgba(235,110,0,0);
+    border-radius: 50%;
+    transition: background-color 0.8s, height 0.8s;
+    
+}
+
+#interest > div:hover{
+    background-color: rgba(235,110,0,0.7);
+    height: 130px;
+}
+#interest > div:hover img{
+   opacity: 0;
+    width: 130px; 
+}
+    .inttext{
+    padding: 0px;
+    position: relative;
+    top: -90px;
+    text-align: center;
+    color: rgba(255,255,255,0);
+    transition: color 0.8s;
+    font-family:'Work Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 700;
+}
+}
