@@ -103,7 +103,7 @@ body{
 }
 
 #interest > div:hover{
-    background-color: rgba(235,110,0,0.7);
+    background-color: rgba(235,110,0,0.6);
     height: 16.8vw;
     width: 16.8vw;
 }
@@ -263,5 +263,17 @@ body{
     font-family:'Work Sans', sans-serif;
     font-size: 3vw;
     font-weight: 700;
+}
+#inttitle{
+    
+    
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 11vw;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    
 }
 }
