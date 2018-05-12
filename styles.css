@@ -5,40 +5,47 @@ body{
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+    width: 96vw;
+/*    border: 2px solid blue;*/
     
 }
 
+
+
 #content{
     
+/*    border: 2px solid yellow;*/
+    width:100%;
     display: grid;
     grid-gap: 20px;
-    grid-template-rows: 550px auto 270px auto;
+    grid-template-rows: minmax(75vh,auto) auto auto auto;
 /*    grid-auto-rows: minmax(550px,auto);*/
 }
 
 #content > div{
 /*			background: #3bbced;*/
-	padding: 40px;
-    width: 92%;
-    margin: auto;
 /*    border: 2px solid blue;*/
+/*	padding: 40px;*/
+    width: 97%;
+    margin: auto;
+    
 		}
 
 #aboutme{
     display: grid;
     grid-template-columns: 5fr 9fr;
-    grid-gap: 60px;
+    grid-gap: 4vw;
     background-color: rgba(235,110,0,0.9);
     grid-template-areas: "aboutmepic aboutmetext"
 }
 
 #aboutme div{
-			
-    padding: 0px;
+/*    border: 2px solid white;*/
+    padding: 7%;
     
-		}
+}
 #aboutmepic{
-    width: 100%;
+    width: 98%;
     grid-area: aboutmepic;
 }
 #aboutmetext{
@@ -48,88 +55,95 @@ body{
     width: 60%;
     font-family:'Work Sans', sans-serif;
     color: white;
-    padding-left: 25%;
-    padding-top: 15%;
-    font-size: 135%;
+    padding-left: 22%;
+    padding-top: 10%;
+    font-size: 1.4vw;
     font-weight: normal;
 }
 #hi{
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 600%;
+    font-size: 6.3vw;
     text-align: center;
     font-weight: 900;
     
 }
 
 
+#inttitle{
+    
+    
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 6vw;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 13vh;
+    padding-bottom: 10vh;
+    
+}
 #interest{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 2vw;
     grid-template-areas: 
         "bad code cricket"
         "learn chess key";
     justify-items: center;
+/*    align-items: center;*/
 }
 #interest > div{
-    height: 220px;
-    padding: 0px;
+    width: 14vw;
+    height: 14vw;
+    padding: 0;
 /*    border: 1px solid red;*/
     background-color: rgba(235,110,0,0);
     border-radius: 50%;
-    transition: background-color 0.8s, height 0.8s;
-    
+    transition: background-color 0.8s, height 0.8s, width 0.8s;
 }
 
 #interest > div:hover{
     background-color: rgba(235,110,0,0.7);
-    height: 250px;
+    height: 16.8vw;
+    width: 16.8vw;
 }
 #interest > div:hover img{
    opacity: 0;
-    width: 250px; 
+    width: 16.8vw; 
 }
 #interest > div:hover .inttext{
     color: rgba(255,255,255,1);
 }
 
 #interest img{
-    width: 220px;
+    width: 14vw;
+/*    object-fit: scale-down;*/
     border-radius: 50%;
     opacity: 1;
     transition: opacity 0.8s, width 0.8s;
 /*    z-index: 0;*/
+    
+    
 }
 #interest img:hover{
     opacity: 0;
-    width: 250px;
+    width: 16.8vw;
 }
 
 .inttext{
     padding: 0px;
     position: relative;
-    top: -160px;
+    top: -10.8vw;
     text-align: center;
     color: rgba(255,255,255,0);
     transition: color 0.8s;
     font-family:'Work Sans', sans-serif;
-    font-size: 150%;
+    font-size: 1.6vw;
     font-weight: 700;
 }
 
 
-#inttitle{
-    padding: 20%;
-    
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 600%;
-    text-align: center;
-    font-weight: 900;
-    
-    
-}
+
 #badminton{
     grid-area: bad;
 }
@@ -149,115 +163,105 @@ body{
     grid-area: key;
 }
 
-/*
-@media only screen and (orientation:portrait){
+@media only screen and (max-width:700px){
 body{
     background-image: url("bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
+    width: 96vw;
+}
+#content > div{
+    width: 100%;
+    margin: auto;
+    
+}
+#hi{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 9.5vw;
+    text-align: center;
+    font-weight: 900;
+    
+}
+#aboutme div{
+/*    border: 2px solid white;*/
+    padding: 0;
+    
+}
+#aboutmepic{
+    width: 98%;
+    grid-area: aboutmepic;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    margin:auto;  
 }
 #aboutme{
-    
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: 60px;
+    grid-gap: 4vw;
     background-color: rgba(235,110,0,0.9);
-    grid-template-areas: "aboutmepic"
-        "aboutmetext"
-    }
+    grid-template-areas: "aboutmepic" "aboutmetext";
+}
 #aboutmetext > p{
     width: 70%;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-family:'Work Sans', sans-serif;
     color: white;
-    padding-left: 5%;
-    padding-top: 15%;
-    font-size: 115%;
+    padding: 4%;
+    font-size: 3.4vw;
     font-weight: normal;
 }
 #interest{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 1.5vw;
     grid-template-areas: 
-        "bad code"
-        "cricket learn"
-        "chess key";
+        "bad code" "cricket learn" "chess key";
     justify-items: center;
-}}
-*/
-@media only screen and (max-width:700px) and (orientation:portrait){
-    body{
-    background-image: url("bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
+/*    align-items: center;*/
 }
-#aboutme{
-    
-    display: grid;
-    grid-template-columns: 100%;
-    grid-gap: 60px;
-    background-color: rgba(235,110,0,0.9);
-    grid-template-areas: "aboutmepic"
-        "aboutmetext"
-    }
-#aboutmetext > p{
-    width: 70%;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    color: white;
-    padding-left: 5%;
-    padding-top: 15%;
-    font-size: 115%;
-    font-weight: normal;
+#interest > div{
+    width: 22vw;
+    height: 22vw;
+    padding: 0;
+/*    border: 1px solid red;*/
+    background-color: rgba(235,110,0,0);
+    border-radius: 50%;
+    transition: background-color 0.8s, height 0.8s, width 0.8s;
 }
-    #interest{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    grid-template-areas: 
-        "bad code"
-        "cricket learn"
-        "chess key";
-    justify-items: center;
-    
+#interest > div:hover{
+    background-color: rgba(235,110,0,0.7);
+    height: 30vw;
+    width: 30vw;
 }
-    #interest img{
-    width: 110px;
+#interest > div:hover img{
+    opacity: 0;
+    width: 30vw; 
+}
+#interest img{
+    width: 22vw;
+/*    object-fit: scale-down;*/
     border-radius: 50%;
     opacity: 1;
     transition: opacity 0.8s, width 0.8s;
 /*    z-index: 0;*/
-}
-    #interest > div{
-    height: 110px;
-    padding: 0px;
-/*    border: 1px solid red;*/
-    background-color: rgba(235,110,0,0);
-    border-radius: 50%;
-    transition: background-color 0.8s, height 0.8s;
+    
     
 }
-
-#interest > div:hover{
-    background-color: rgba(235,110,0,0.7);
-    height: 130px;
+#interest img:hover{
+    opacity: 0;
+    width: 30vw;
 }
-#interest > div:hover img{
-   opacity: 0;
-    width: 130px; 
-}
-    .inttext{
+.inttext{
     padding: 0px;
     position: relative;
-    top: -90px;
+    top: -20vw;
     text-align: center;
     color: rgba(255,255,255,0);
     transition: color 0.8s;
     font-family:'Work Sans', sans-serif;
-    font-size: 100%;
+    font-size: 3vw;
     font-weight: 700;
 }
 }
