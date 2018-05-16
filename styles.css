@@ -4,21 +4,21 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100%;
+    /* height: 100%; */
     width: 96vw;
 /*    border: 2px solid blue;*/
-    
+
 }
 
 
 
 #content{
-    
-/*    border: 2px solid yellow;*/
+
+   /* border: 2px solid yellow; */
     width:100%;
     display: grid;
     grid-gap: 20px;
-    grid-template-rows: minmax(75vh,auto) auto auto auto;
+    grid-template-rows: minmax(75vh,auto) auto auto auto 101vh;
 /*    grid-auto-rows: minmax(550px,auto);*/
 }
 
@@ -28,7 +28,7 @@ body{
 /*	padding: 40px;*/
     width: 97%;
     margin: auto;
-    
+
 		}
 
 #aboutme{
@@ -42,7 +42,7 @@ body{
 #aboutme div{
 /*    border: 2px solid white;*/
     padding: 7%;
-    
+
 }
 #aboutmepic{
     width: 98%;
@@ -66,13 +66,13 @@ body{
     font-size: 6.3vw;
     text-align: center;
     font-weight: 900;
-    
+
 }
 
 
 #inttitle{
-    
-    
+
+
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 6vw;
@@ -80,13 +80,13 @@ body{
     font-weight: 900;
     padding-top: 13vh;
     padding-bottom: 10vh;
-    
+
 }
 #interest{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2vw;
-    grid-template-areas: 
+    grid-template-areas:
         "bad code cricket"
         "learn chess key";
     justify-items: center;
@@ -109,7 +109,7 @@ body{
 }
 #interest > div:hover img{
    opacity: 0;
-    width: 16.8vw; 
+    width: 16.8vw;
 }
 #interest > div:hover .inttext{
     color: rgba(255,255,255,1);
@@ -122,8 +122,8 @@ body{
     opacity: 1;
     transition: opacity 0.8s, width 0.8s;
 /*    z-index: 0;*/
-    
-    
+
+
 }
 #interest img:hover{
     opacity: 0;
@@ -163,6 +163,63 @@ body{
     grid-area: key;
 }
 
+#contact{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 2px solid red;
+
+}
+canvas{
+  border: 2px solid red;
+  float : left;
+
+
+}
+#contact p{
+  color:white;
+  width: 80%;
+  font-family:'Work Sans', sans-serif;
+  font-size: 2vw;
+  font-weight: 500;
+  text-align: center;
+  float: left;
+  position: relative;
+  top: -60vh;
+  left: 10vw;
+  margin: auto;
+}
+
+#social{
+
+width: 100%;
+margin: 0;
+padding: 0;
+display: block;
+
+}
+#social img{
+  display: inline-block;
+  width : 4vw;
+  position: relative;
+  top: -30vh;
+  margin: 0;
+  padding: 0;
+}
+#fb{
+  right: 60vw;
+}
+#gh{
+  right: 45vw;
+}
+#gp{
+  right: 30vw;
+}
+#mail{
+  right: 15vw;
+}
+
+
 @media only screen and (max-width:700px){
 body{
     background-image: url("bg2.jpg");
@@ -175,7 +232,7 @@ body{
 #content > div{
     width: 100%;
     margin: auto;
-    
+
 }
 #hi{
     font-family: 'Montserrat', sans-serif;
@@ -183,19 +240,19 @@ body{
     font-size: 9.5vw;
     text-align: center;
     font-weight: 900;
-    
+
 }
 #aboutme div{
 /*    border: 2px solid white;*/
     padding: 0;
-    
+
 }
 #aboutmepic{
     width: 98%;
     grid-area: aboutmepic;
     padding-bottom: 2vh;
     padding-top: 2vh;
-    margin:auto;  
+    margin:auto;
 }
 #aboutme{
     display: grid;
@@ -216,7 +273,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5vw;
-    grid-template-areas: 
+    grid-template-areas:
         "bad code" "cricket learn" "chess key";
     justify-items: center;
 /*    align-items: center;*/
@@ -237,7 +294,7 @@ body{
 }
 #interest > div:hover img{
     opacity: 0;
-    width: 30vw; 
+    width: 30vw;
 }
 #interest img{
     width: 22vw;
@@ -246,8 +303,8 @@ body{
     opacity: 1;
     transition: opacity 0.8s, width 0.8s;
 /*    z-index: 0;*/
-    
-    
+
+
 }
 #interest img:hover{
     opacity: 0;
@@ -265,8 +322,8 @@ body{
     font-weight: 700;
 }
 #inttitle{
-    
-    
+
+
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 11vw;
@@ -274,6 +331,51 @@ body{
     font-weight: 900;
     padding-top: 12vh;
     padding-bottom: 8vh;
-    
+
 }
+#contact p{
+  color:white;
+  width: 80%;
+  font-family:'Work Sans', sans-serif;
+  font-size: 5vw;
+  font-weight: 500;
+  text-align: center;
+  float: left;
+  position: relative;
+  top: -80vh;
+  left: 10vw;
+  margin: auto;
+}
+
+#social{
+
+width: 100%;
+margin: 0;
+padding: 0;
+display: block;
+position: relative;
+top: -20vh;
+
+}
+#social img{
+  display: inline-block;
+  width : 10vw;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#fb{
+  right: 40vw;
+}
+#gh{
+  right: 40vw;
+}
+#gp{
+  right: 40vw;
+}
+#mail{
+  right: 40vw;
+  /* top : 10vh; */
+}
+
 }
