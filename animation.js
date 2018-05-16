@@ -7,11 +7,12 @@ var c = canvas.getContext('2d');
 
 colors = ['#FFA361','#FF7A52','#FF633B','#FF4F3D','#FC2D28'];
 if(window.matchMedia("(max-width: 700px)").matches){
-  var d = innerHeight/18;
+  var d = innerHeight/20;
+  speed = 1;
 }
 else{
   var d = innerHeight/9;
-
+  speed = 3;
 }
 
 function Circle(x,y,radius,dx,dy){
@@ -49,8 +50,8 @@ var circles = [];
 for(var i = 0;i<200;++i){
   x = Math.random()*window.innerWidth*0.92;
   y = Math.random()*window.innerHeight;
-  dx = (Math.random()-0.5)*3;
-  dy = (Math.random()-0.5)*3;
+  dx = (Math.random()-0.5)*speed;
+  dy = (Math.random()-0.5)*speed;
   radius = 0.1;
   circles.push(new Circle(x,y,radius,dx,dy));
 }
