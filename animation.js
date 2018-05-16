@@ -6,6 +6,13 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 colors = ['#FFA361','#FF7A52','#FF633B','#FF4F3D','#FC2D28'];
+if(window.matchMedia("(max-width: 700px)").matches){
+  var d = innerHeight/18;
+}
+else{
+  var d = innerHeight/9;
+
+}
 
 function Circle(x,y,radius,dx,dy){
   this.x = x;
@@ -49,7 +56,8 @@ for(var i = 0;i<200;++i){
 }
 
 function drawLine(c1, c2){
-  var d = innerWidth*0.92/17;
+
+
   if(c1.x-c2.x > 0){
     var del_x = c1.x-c2.x;
   }
@@ -101,4 +109,4 @@ function animate(){
   }
 }
 
-// animate();
+animate();
